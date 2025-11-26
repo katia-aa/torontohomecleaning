@@ -5,6 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TorontoHomeCleaning | Professional Home Cleaning in Toronto</title>
     <meta name="description" content="Professional residential cleaning services in Toronto. Standard cleaning, deep cleaning, and move in/out cleaning. Reliable, thorough, and hassle-free.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="TorontoHomeCleaning | Professional Home Cleaning in Toronto">
+    <meta property="og:description" content="Life's too short to spend it cleaning. Professional home cleaning services in Toronto - The Annex, Yorkville, Leslieville, High Park & more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://torontohomecleaning.ca">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TorontoHomeCleaning",
+      "description": "Professional residential cleaning services in Toronto",
+      "url": "https://torontohomecleaning.ca",
+      "telephone": "+1-647-838-7663",
+      "email": "hello@torontohomecleaning.ca",
+      "areaServed": [
+        "The Annex, Toronto",
+        "Yorkville, Toronto",
+        "Leslieville, Toronto",
+        "Roncesvalles, Toronto",
+        "High Park, Toronto",
+        "Liberty Village, Toronto",
+        "King West, Toronto",
+        "Queen West, Toronto",
+        "The Beaches, Toronto",
+        "The Danforth, Toronto"
+      ],
+      "priceRange": "$$",
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"],
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Standard Clean",
+          "description": "Regular maintenance cleaning including dusting, vacuuming, mopping, bathroom and kitchen cleaning"
+        },
+        {
+          "@type": "Service",
+          "name": "Deep Clean",
+          "description": "Thorough top-to-bottom cleaning including inside appliances, baseboards, and light fixtures"
+        },
+        {
+          "@type": "Service",
+          "name": "Move In/Out Clean",
+          "description": "Complete cleaning for moving including closets, oven, fridge, and all surfaces"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,197 +68,659 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #2d3436;
+            background: #fffcf9;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
+        }
+
+        /* Nav */
+        nav {
+            padding: 20px 0;
+            background: #fffcf9;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #00a896;
+        }
+
+        .nav-cta {
+            background: #00a896;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: #008f7a;
+            transform: translateY(-2px);
         }
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
             font-weight: 700;
+            line-height: 1.15;
+            color: #1a1a1a;
+            margin-bottom: 20px;
         }
 
-        .hero .tagline {
-            font-size: 1.25rem;
-            opacity: 0.95;
-            margin-bottom: 30px;
+        .hero-content h1 span {
+            color: #00a896;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #0d9488;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            color: #636e72;
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #00a896;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
             text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .cta-button:hover {
+        .btn-primary:hover {
+            background: #008f7a;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0,168,150,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #1a1a1a;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: #00a896;
+            color: #00a896;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-badge .stars {
+            color: #f9ca24;
+            font-size: 1.1rem;
+        }
+
+        .hero-badge span {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            padding: 40px 0;
+            background: white;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #636e72;
+            font-size: 0.95rem;
+        }
+
+        .trust-item svg {
+            width: 24px;
+            height: 24px;
+            color: #00a896;
         }
 
         /* Services */
         .services {
-            padding: 60px 20px;
-            background: #f9fafb;
+            padding: 100px 0;
         }
 
-        .services h2 {
+        .section-header {
             text-align: center;
-            font-size: 1.75rem;
-            margin-bottom: 40px;
-            color: #111;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #636e72;
+            font-size: 1.1rem;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            max-width: 800px;
-            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
         .service-card {
             background: white;
-            padding: 30px 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 28px;
         }
 
         .service-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             margin-bottom: 10px;
-            color: #0d9488;
+            color: #1a1a1a;
         }
 
         .service-card p {
-            color: #666;
+            color: #636e72;
             font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
         .service-card .price {
-            margin-top: 15px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #00a896;
+        }
+
+        .service-card .price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #636e72;
+        }
+
+        /* Why Us */
+        .why-us {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f8f9fa 0%, #fffcf9 100%);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 60px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            background: #e8f8f5;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .why-icon svg {
+            width: 28px;
+            height: 28px;
+            color: #00a896;
+        }
+
+        .why-item h3 {
+            font-size: 1.15rem;
             font-weight: 600;
-            color: #111;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .why-item p {
+            color: #636e72;
+            font-size: 0.95rem;
         }
 
         /* Areas */
         .areas {
-            padding: 50px 20px;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .areas h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
         }
 
-        .areas p {
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
+        .area-tag {
+            background: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            transition: all 0.2s ease;
+        }
+
+        .area-tag:hover {
+            background: #00a896;
+            color: white;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #00a896 0%, #00c9b1 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .cta .btn-white {
+            background: white;
+            color: #00a896;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .cta .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         /* Contact */
         .contact {
-            background: #111;
+            padding: 80px 0;
+            background: #1a1a1a;
             color: white;
-            padding: 60px 20px;
-            text-align: center;
+        }
+
+        .contact .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
         }
 
         .contact h2 {
-            font-size: 1.75rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        .contact-info {
+        .contact p {
+            color: #a0a0a0;
             margin-bottom: 30px;
         }
 
         .contact-info a {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
-            margin: 10px 0;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            transition: color 0.2s;
         }
 
         .contact-info a:hover {
-            color: #14b8a6;
+            color: #00a896;
         }
 
-        .contact .cta-button {
-            background: #14b8a6;
-            color: white;
+        .contact-info svg {
+            width: 22px;
+            height: 22px;
+            color: #00a896;
+        }
+
+        .contact-right h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-right p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
         }
 
         /* Footer */
         footer {
-            background: #111;
+            background: #141414;
             color: #666;
             text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            border-top: 1px solid #222;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .hero-badge {
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact .container {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 1.75rem;
+            .hero-content h1 {
+                font-size: 2rem;
             }
-            .hero .tagline {
-                font-size: 1rem;
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .trust-items {
+                gap: 25px;
+            }
+
+            .cta h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Toronto<span>Home</span>Cleaning</a>
+            <a href="tel:6478387663" class="nav-cta">Call Now</a>
+        </div>
+    </nav>
+
     <section class="hero">
         <div class="container">
-            <h1>TorontoHomeCleaning</h1>
-            <p class="tagline">Toronto's Trusted Home Cleaning Service</p>
-            <a href="tel:6478387663" class="cta-button">Call (647) 838-7663</a>
+            <div class="hero-content">
+                <h1>A clean home, <span>without the hassle</span></h1>
+                <p class="subtitle">Life's too short to spend it cleaning. We'll take care of your home so you can take care of everything else.</p>
+                <div class="hero-buttons">
+                    <a href="tel:6478387663" class="btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        (647) 838-7663
+                    </a>
+                    <a href="mailto:hello@torontohomecleaning.ca?subject=Quote%20Request" class="btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Clean bright living room">
+                <div class="hero-badge">
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span>Trusted in Toronto</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="trust-bar">
         <div class="container">
-            <h2>Our Services</h2>
+            <div class="trust-items">
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>Insured & Bonded</span>
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Flexible Scheduling</span>
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span>Eco-Friendly Products</span>
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>Satisfaction Guaranteed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Services that fit your life</h2>
+                <p>Whether you need a quick refresh or a deep clean, we've got you covered.</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Standard Clean</h3>
-                    <p>Regular maintenance cleaning. Dusting, vacuuming, mopping, bathroom and kitchen cleaning.</p>
-                    <p class="price">From $120</p>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Clean modern living space">
+                    <div class="service-card-content">
+                        <h3>Standard Clean</h3>
+                        <p>Perfect for regular upkeep. Dusting, vacuuming, mopping, and bathroom & kitchen cleaning.</p>
+                        <div class="price">$120 <span>/ starting at</span></div>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <h3>Deep Clean</h3>
-                    <p>Thorough top-to-bottom cleaning. Inside appliances, baseboards, light fixtures, and more.</p>
-                    <p class="price">From $220</p>
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&q=80" alt="Sparkling clean kitchen">
+                    <div class="service-card-content">
+                        <h3>Deep Clean</h3>
+                        <p>Top-to-bottom thorough cleaning. Inside appliances, baseboards, light fixtures, and all the hidden spots.</p>
+                        <div class="price">$220 <span>/ starting at</span></div>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <h3>Move In/Out</h3>
-                    <p>Get your deposit back or start fresh. Complete cleaning including inside closets, oven, and fridge.</p>
-                    <p class="price">From $280</p>
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&q=80" alt="Empty clean apartment">
+                    <div class="service-card-content">
+                        <h3>Move In/Out</h3>
+                        <p>Get your deposit back or start fresh. Complete cleaning of every corner, closet, and appliance.</p>
+                        <div class="price">$280 <span>/ starting at</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why people choose us</h2>
+                <p>We're not just cleaners. We're people who care about your space.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <div>
+                        <h3>Real people, real care</h3>
+                        <p>No faceless corporations. You'll know who's cleaning your home and you'll see the same friendly faces.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <div>
+                        <h3>Your schedule, your way</h3>
+                        <p>One-time, weekly, bi-weekly, monthly - whatever works for your life. Easy to reschedule when things change.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    </div>
+                    <div>
+                        <h3>Detailed & thorough</h3>
+                        <p>We don't cut corners. Every clean follows our checklist so nothing gets missed.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div>
+                        <h3>Fair, transparent pricing</h3>
+                        <p>No hidden fees, no surprises. You'll know exactly what you're paying before we start.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -211,19 +728,55 @@
 
     <section class="areas">
         <div class="container">
-            <h2>Areas We Serve</h2>
-            <p>The Annex, Yorkville, Leslieville, Roncesvalles, High Park, Liberty Village, King West, Queen West, Beaches, and Danforth.</p>
+            <div class="section-header">
+                <h2>Serving Toronto's best neighbourhoods</h2>
+            </div>
+            <div class="areas-list">
+                <span class="area-tag">The Annex</span>
+                <span class="area-tag">Yorkville</span>
+                <span class="area-tag">Leslieville</span>
+                <span class="area-tag">Roncesvalles</span>
+                <span class="area-tag">High Park</span>
+                <span class="area-tag">Liberty Village</span>
+                <span class="area-tag">King West</span>
+                <span class="area-tag">Queen West</span>
+                <span class="area-tag">The Beaches</span>
+                <span class="area-tag">The Danforth</span>
+            </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="cta">
         <div class="container">
-            <h2>Book Your Clean</h2>
-            <div class="contact-info">
-                <a href="tel:6478387663">(647) 838-7663</a>
-                <a href="mailto:hello@torontohomecleaning.ca">hello@torontohomecleaning.ca</a>
+            <h2>Ready for a cleaner home?</h2>
+            <p>Book your first clean today. No commitment, no hassle.</p>
+            <a href="tel:6478387663" class="btn-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call (647) 838-7663
+            </a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Let's talk</h2>
+                <p>Have questions? Want a custom quote? We're here to help.</p>
+                <div class="contact-info">
+                    <a href="tel:6478387663">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        (647) 838-7663
+                    </a>
+                    <a href="mailto:hello@torontohomecleaning.ca">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        hello@torontohomecleaning.ca
+                    </a>
+                </div>
             </div>
-            <a href="mailto:hello@torontohomecleaning.ca?subject=Cleaning%20Quote%20Request" class="cta-button">Request a Quote</a>
+            <div class="contact-right">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+            </div>
         </div>
     </section>
 
